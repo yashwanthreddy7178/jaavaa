@@ -38,7 +38,7 @@ public class Form {
     private String status;
 
     @Column(columnDefinition = "LONGTEXT")
-    private String content;
+    private String content;  // Changed back to String to store JSON as text
 
     @Column(name = "submitted_at", nullable = false)
     private LocalDateTime submittedAt;
