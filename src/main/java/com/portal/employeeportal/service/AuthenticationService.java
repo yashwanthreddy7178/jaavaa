@@ -29,6 +29,13 @@ public class AuthenticationService {
     private final EmailService emailService;
 
     public AuthenticationResponse register(RegisterRequest request) {
+        if (employeeRepository.existsByEmail(request.getEmail())) {
+            throw new RuntimeException("Email already exists");
+        }
+        if (employeeRepository.existsByEmployeeId(request.getEmployeeId())) {
+            throw new RuntimeException("Employee ID already exists");
+        }
+
         var employee = Employee.builder()
                 .name(request.getName())
                 .email(request.getEmail())

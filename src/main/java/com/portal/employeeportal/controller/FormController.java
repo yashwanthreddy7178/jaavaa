@@ -15,6 +15,7 @@ import com.portal.employeeportal.dto.FormRequest;
 import com.portal.employeeportal.dto.FormResponse;
 import com.portal.employeeportal.service.FormService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -25,7 +26,7 @@ public class FormController {
     private final FormService formService;
 
     @PostMapping
-    public ResponseEntity<FormResponse> submitForm(@RequestBody FormRequest request) {
+    public ResponseEntity<FormResponse> submitForm(@Valid @RequestBody FormRequest request) {
         return ResponseEntity.ok(formService.submitForm(request));
     }
 
