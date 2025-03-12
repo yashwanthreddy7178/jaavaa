@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "src/main/java/com/portal/employeeportal/service",
+        "src/main/java/com/portal/employeeportal/repository",
+        "src/main/java/com/portal/employeeportal/model",
+        "src/main/java/com/portal/employeeportal/dto",
+        "src/main/java/com/portal/employeeportal/controller",
+        "src/main/java/com/portal/employeeportal/config",
+        "src/main/java/com/portal/employeeportal"
+    ]
+}
